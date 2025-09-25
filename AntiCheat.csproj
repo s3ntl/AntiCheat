@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB7B027A-C00D-4809-A2DD-EC24B1F72573}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AntiCheat</RootNamespace>
+    <AssemblyName>AntiCheat</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>Library\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>Library\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirage, Version=151.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\Mirage.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirage.Authenticators, Version=151.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mirage.Authenticators.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirage.Components, Version=151.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mirage.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirage.SocketLayer, Version=151.2.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mirage.SocketLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirage.Sockets.Udp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mirage.Sockets.Udp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mirage.SteamworksSocket, Version=0.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mirage.SteamworksSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="Nuclei">
+      <HintPath>C:\Users\s3nt1\Desktop\Nuclei.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Managed\Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Windows, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Managed\Rewired_Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Pipelines, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\s3nt1\Desktop\MaxWasUnavailable.Nuclei\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UniTask, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Addressables, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Z:\SteamLibrary\steamapps\common\Nuclear Option\NuclearOption_Data\Managed\UniTask.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Library\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>Library\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>Library\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>Library\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analyzers\Analyzer.cs" />
+    <Compile Include="Patches\UnitRegistered.cs" />
+    <Compile Include="Signals\HookExploitUsedSignal.cs" />
+    <Compile Include="Signals\PlayerAircraftRegisteredSignal.cs" />
+    <Compile Include="Utils\ACThreadManager.cs" />
+    <Compile Include="Analyzers\IAnalyzer.cs" />
+    <Compile Include="Services\KickService.cs" />
+    <Compile Include="Patches\InterceptHookExploiting.cs" />
+    <Compile Include="Signals\KickSignal.cs" />
+    <Compile Include="Utils\EventBus.cs" />
+    <Compile Include="Utils\PlayerData.cs" />
+    <Compile Include="Analyzers\SpeedHackAnalyzer.cs" />
+    <Compile Include="Analyzers\TeleportAnalyzer.cs" />
+    <Compile Include="Patches\MissionLoad.cs" />
+    <Compile Include="Patches\PlayerConnected.cs" />
+    <Compile Include="Patches\PlayerDisconnected.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Tools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Managed\Accessibility.dll" />
+    <Content Include="Managed\Assembly-CSharp-firstpass.dll" />
+    <Content Include="Managed\com.rlabrecque.steamworks.net.dll" />
+    <Content Include="Managed\Interop.SpeechLib.dll" />
+    <Content Include="Managed\JamesFrowen.Build.Runtime.dll" />
+    <Content Include="Managed\JamesFrowen.Graphy.dll" />
+    <Content Include="Managed\JamesFrowen.ScriptableVariables.dll" />
+    <Content Include="Managed\Mirage.Authenticators.dll" />
+    <Content Include="Managed\Mirage.Components.dll" />
+    <Content Include="Managed\Mirage.dll" />
+    <Content Include="Managed\Mirage.SocketLayer.dll" />
+    <Content Include="Managed\Mirage.Sockets.Udp.dll" />
+    <Content Include="Managed\Mirage.SteamworksSocket.dll" />
+    <Content Include="Managed\Mono.Data.Sqlite.dll" />
+    <Content Include="Managed\Mono.Posix.dll" />
+    <Content Include="Managed\Mono.Security.dll" />
+    <Content Include="Managed\Mono.WebBrowser.dll" />
+    <Content Include="Managed\mscorlib.dll" />
+    <Content Include="Managed\netstandard.dll" />
+    <Content Include="Managed\Novell.Directory.Ldap.dll" />
+    <Content Include="Managed\Ookii.Dialogs.dll" />
+    <Content Include="Managed\ProfanityDetector.dll" />
+    <Content Include="Managed\Rewired_Core.dll" />
+    <Content Include="Managed\Rewired_Windows.dll" />
+    <Content Include="Managed\RuntimeTransformHandle.dll" />
+    <Content Include="Managed\StandaloneFileBrowser.dll" />
+    <Content Include="Managed\System.ComponentModel.Composition.dll" />
+    <Content Include="Managed\System.ComponentModel.DataAnnotations.dll" />
+    <Content Include="Managed\System.Configuration.dll" />
+    <Content Include="Managed\System.Core.dll" />
+    <Content Include="Managed\System.Data.DataSetExtensions.dll" />
+    <Content Include="Managed\System.Data.dll" />
+    <Content Include="Managed\System.Design.dll" />
+    <Content Include="Managed\System.DirectoryServices.dll" />
+    <Content Include="Managed\System.dll" />
+    <Content Include="Managed\System.Drawing.Design.dll" />
+    <Content Include="Managed\System.Drawing.dll" />
+    <Content Include="Managed\System.EnterpriseServices.dll" />
+    <Content Include="Managed\System.IO.Compression.dll" />
+    <Content Include="Managed\System.IO.Compression.FileSystem.dll" />
+    <Content Include="Managed\System.Net.Http.dll" />
+    <Content Include="Managed\System.Numerics.dll" />
+    <Content Include="Managed\System.Runtime.dll" />
+    <Content Include="Managed\System.Runtime.Serialization.dll" />
+    <Content Include="Managed\System.Runtime.Serialization.Formatters.Soap.dll" />
+    <Content Include="Managed\System.Security.dll" />
+    <Content Include="Managed\System.ServiceModel.Internals.dll" />
+    <Content Include="Managed\System.Transactions.dll" />
+    <Content Include="Managed\System.Web.ApplicationServices.dll" />
+    <Content Include="Managed\System.Web.dll" />
+    <Content Include="Managed\System.Web.Services.dll" />
+    <Content Include="Managed\System.Windows.Forms.dll" />
+    <Content Include="Managed\System.Xml.dll" />
+    <Content Include="Managed\System.Xml.Linq.dll" />
+    <Content Include="Managed\UniTask.Addressables.dll" />
+    <Content Include="Managed\UniTask.dll" />
+    <Content Include="Managed\UniTask.DOTween.dll" />
+    <Content Include="Managed\UniTask.Linq.dll" />
+    <Content Include="Managed\UniTask.TextMeshPro.dll" />
+    <Content Include="Managed\Unity.Addressables.dll" />
+    <Content Include="Managed\Unity.AI.Navigation.dll" />
+    <Content Include="Managed\Unity.Animation.Rigging.dll" />
+    <Content Include="Managed\Unity.Animation.Rigging.DocCodeExamples.dll" />
+    <Content Include="Managed\Unity.Burst.dll" />
+    <Content Include="Managed\Unity.Burst.Unsafe.dll" />
+    <Content Include="Managed\Unity.InputSystem.dll" />
+    <Content Include="Managed\Unity.InputSystem.ForUI.dll" />
+    <Content Include="Managed\Unity.InputSystem.RebindingUI.dll" />
+    <Content Include="Managed\Unity.Mathematics.dll" />
+    <Content Include="Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll" />
+    <Content Include="Managed\Unity.RenderPipelines.Core.Runtime.dll" />
+    <Content Include="Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll" />
+    <Content Include="Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" />
+    <Content Include="Managed\Unity.RenderPipelines.Universal.Runtime.dll" />
+    <Content Include="Managed\Unity.RenderPipelines.Universal.Shaders.dll" />
+    <Content Include="Managed\Unity.ResourceManager.dll" />
+    <Content Include="Managed\Unity.ScriptableBuildPipeline.dll" />
+    <Content Include="Managed\Unity.TextMeshPro.dll" />
+    <Content Include="Managed\UnityEngine.AccessibilityModule.dll" />
+    <Content Include="Managed\UnityEngine.AIModule.dll" />
+    <Content Include="Managed\UnityEngine.AndroidJNIModule.dll" />
+    <Content Include="Managed\UnityEngine.AnimationModule.dll" />
+    <Content Include="Managed\UnityEngine.ARModule.dll" />
+    <Content Include="Managed\UnityEngine.AssetBundleModule.dll" />
+    <Content Include="Managed\UnityEngine.AudioModule.dll" />
+    <Content Include="Managed\UnityEngine.ClothModule.dll" />
+    <Content Include="Managed\UnityEngine.ClusterInputModule.dll" />
+    <Content Include="Managed\UnityEngine.ClusterRendererModule.dll" />
+    <Content Include="Managed\UnityEngine.ContentLoadModule.dll" />
+    <Content Include="Managed\UnityEngine.CoreModule.dll" />
+    <Content Include="Managed\UnityEngine.CrashReportingModule.dll" />
+    <Content Include="Managed\UnityEngine.DirectorModule.dll" />
+    <Content Include="Managed\UnityEngine.dll" />
+    <Content Include="Managed\UnityEngine.DSPGraphModule.dll" />
+    <Content Include="Managed\UnityEngine.GameCenterModule.dll" />
+    <Content Include="Managed\UnityEngine.GIModule.dll" />
+    <Content Include="Managed\UnityEngine.GridModule.dll" />
+    <Content Include="Managed\UnityEngine.HotReloadModule.dll" />
+    <Content Include="Managed\UnityEngine.ImageConversionModule.dll" />
+    <Content Include="Managed\UnityEngine.IMGUIModule.dll" />
+    <Content Include="Managed\UnityEngine.InputLegacyModule.dll" />
+    <Content Include="Managed\UnityEngine.InputModule.dll" />
+    <Content Include="Managed\UnityEngine.JSONSerializeModule.dll" />
+    <Content Include="Managed\UnityEngine.LocalizationModule.dll" />
+    <Content Include="Managed\UnityEngine.NVIDIAModule.dll" />
+    <Content Include="Managed\UnityEngine.ParticleSystemModule.dll" />
+    <Content Include="Managed\UnityEngine.PerformanceReportingModule.dll" />
+    <Content Include="Managed\UnityEngine.Physics2DModule.dll" />
+    <Content Include="Managed\UnityEngine.PhysicsModule.dll" />
+    <Content Include="Managed\UnityEngine.ProfilerModule.dll" />
+    <Content Include="Managed\UnityEngine.PropertiesModule.dll" />
+    <Content Include="Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" />
+    <Content Include="Managed\UnityEngine.ScreenCaptureModule.dll" />
+    <Content Include="Managed\UnityEngine.SharedInternalsModule.dll" />
+    <Content Include="Managed\UnityEngine.SpriteMaskModule.dll" />
+    <Content Include="Managed\UnityEngine.SpriteShapeModule.dll" />
+    <Content Include="Managed\UnityEngine.StreamingModule.dll" />
+    <Content Include="Managed\UnityEngine.SubstanceModule.dll" />
+    <Content Include="Managed\UnityEngine.SubsystemsModule.dll" />
+    <Content Include="Managed\UnityEngine.TerrainModule.dll" />
+    <Content Include="Managed\UnityEngine.TerrainPhysicsModule.dll" />
+    <Content Include="Managed\UnityEngine.TextCoreFontEngineModule.dll" />
+    <Content Include="Managed\UnityEngine.TextCoreTextEngineModule.dll" />
+    <Content Include="Managed\UnityEngine.TextRenderingModule.dll" />
+    <Content Include="Managed\UnityEngine.TilemapModule.dll" />
+    <Content Include="Managed\UnityEngine.TLSModule.dll" />
+    <Content Include="Managed\UnityEngine.UI.dll" />
+    <Content Include="Managed\UnityEngine.UIElementsModule.dll" />
+    <Content Include="Managed\UnityEngine.UIModule.dll" />
+    <Content Include="Managed\UnityEngine.UmbraModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityAnalyticsCommonModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityAnalyticsModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityConnectModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityCurlModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityTestProtocolModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityWebRequestAudioModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityWebRequestModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityWebRequestTextureModule.dll" />
+    <Content Include="Managed\UnityEngine.UnityWebRequestWWWModule.dll" />
+    <Content Include="Managed\UnityEngine.VehiclesModule.dll" />
+    <Content Include="Managed\UnityEngine.VFXModule.dll" />
+    <Content Include="Managed\UnityEngine.VideoModule.dll" />
+    <Content Include="Managed\UnityEngine.VirtualTexturingModule.dll" />
+    <Content Include="Managed\UnityEngine.VRModule.dll" />
+    <Content Include="Managed\UnityEngine.WindModule.dll" />
+    <Content Include="Managed\UnityEngine.XRModule.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Replay Mod.csproj.AssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
